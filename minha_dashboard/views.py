@@ -38,3 +38,6 @@ def relatorio_faturamento_mensal(request):
     data_json = {'data': data, 'labels': labels}
 
     return JsonResponse(data_json)
+
+def teste(request):
+    return render(request, 'teste.html')
