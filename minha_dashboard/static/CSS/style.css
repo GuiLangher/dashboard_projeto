@@ -1,0 +1,141 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #f5f1f1;
+    display: flex;
+}
+/*Menu lateral*/
+
+.menu {
+    width: 20vw;
+}
+
+.menu_lateral{
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    padding: 40px 0 40px 1%;
+    box-shadow: 5px 0 0 #1E90FF;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+ul > li.item_menu{
+    transition: .2s;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+ul > li.item_menu:hover{
+    background: #1E90FF;
+}
+
+ul > li.item_menu a{
+    text-decoration: none;
+    font-size: 25px;
+    padding: 25px 4%;
+    margin-left: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    color: black;
+}
+
+ul > li.item_menu .txt_link{
+    margin-left: 10px;
+}
+
+.menu .material-symbols-outlined{
+    font-size: 30px;
+}
+
+/*Até aqui*/
+
+.tela{
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 80vw;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.totais{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.valor{
+    background-color: white;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.valor .txt {
+    padding-right: 15px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.tela .material-symbols-outlined {
+    font-size: 40px;
+    margin: 10px;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+#aluguel{
+    background-color: #9cbaf1;
+    color: #4169E1;
+}
+
+#disponivel{
+    background-color: #7FFFD4;
+    color: #008000;
+}
+
+#ocupado{
+    background-color: #FFDEAD;
+    color: #A0522D;
+}
+
+#manutencao{
+    background-color: #FF7F50;
+    color: #8B0000;
+}
+
+.valor > p{
+    padding-top: 15px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.grafico{
+    background-color: white;
+    margin-top: 20px;
+    width: 75vw;
+    border-radius: 10px;
+}
+
+h2{
+    margin-left: 30px;
+    padding-top: 5px;
+}
