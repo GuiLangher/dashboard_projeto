@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Menu lateral*/
+
+.menu {
+    width: 20vw;
+}
+
+.menu_lateral{
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    padding: 40px 0 40px 1%;
+    box-shadow: 5px 0 0 #1E90FF;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+ul > li.item_menu{
+    transition: .2s;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+ul > li.item_menu:hover{
+    background: #1E90FF;
+}
+
+ul > li.item_menu a{
+    text-decoration: none;
+    font-size: 25px;
+    padding: 25px 4%;
+    margin-left: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    color: black;
+}
+
+ul > li.item_menu .txt_link{
+    margin-left: 10px;
+}
+
+.menu .material-symbols-outlined{
+    font-size: 30px;
+}
+
+/*Até aqui*/

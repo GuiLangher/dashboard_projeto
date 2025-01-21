@@ -8,6 +8,10 @@ def home(request):
     return render(request, 'home.html')
 
 
+def alugueis(request):
+    return render(request, 'alugueis.html')
+
+
 def retorna_total_vendido(request):
     total = Vendas.objects.all().aggregate(Sum('total'))['total__sum']
     return JsonResponse({'total' : total})
@@ -37,6 +41,3 @@ def relatorio_faturamento_mensal(request):
     data_json = {'data': data, 'labels': labels}
 
     return JsonResponse(data_json)
-
-def teste(request):
-    return render(request, 'teste.html')

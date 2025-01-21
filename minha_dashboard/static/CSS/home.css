@@ -7,78 +7,23 @@
 
 body{
     height: 100vh;
+    width: 100vw;
     background-color: #f5f1f1;
-    display: flex;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
 }
-/*Menu lateral*/
-
-.menu {
-    width: 20vw;
-}
-
-.menu_lateral{
-    width: 250px;
-    height: 100%;
-    background-color: white;
-    padding: 40px 0 40px 1%;
-    box-shadow: 5px 0 0 #1E90FF;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-ul {
-    height: 100%;
-    list-style-type: none;
-    margin-top: 50px;
-}
-
-ul > li.item_menu{
-    transition: .2s;
-    width: 90%;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-
-ul > li.item_menu:hover{
-    background: #1E90FF;
-}
-
-ul > li.item_menu a{
-    text-decoration: none;
-    font-size: 25px;
-    padding: 25px 4%;
-    margin-left: 20px;
-    display: flex;
-    margin-bottom: 20px;
-    color: black;
-}
-
-ul > li.item_menu .txt_link{
-    margin-left: 10px;
-}
-
-.menu .material-symbols-outlined{
-    font-size: 30px;
-}
-
-/*Até aqui*/
 
 .tela{
-    margin: 1% 2%;
-    width: 80vw;
     height: 100vh;
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin: 30px 0 30px 0;
     font-size: 40px;
 }
 
 .totais{
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
