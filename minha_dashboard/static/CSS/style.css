@@ -17,7 +17,7 @@ body{
 }
 
 .menu_lateral{
-    width: 300px;
+    width: 250px;
     height: 100%;
     background-color: white;
     padding: 40px 0 40px 1%;
@@ -66,8 +66,7 @@ ul > li.item_menu .txt_link{
 /*Até aqui*/
 
 .tela{
-    margin-left: 2%;
-    margin-top: 2%;
+    margin: 2% 2%;
     width: 80vw;
     height: 100vh;
 }

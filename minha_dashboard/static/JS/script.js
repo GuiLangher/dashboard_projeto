@@ -19,7 +19,7 @@ function renderiza_faturamento_mensal(url){
 
         const ctx = document.getElementById('faturamento_mensal'). getContext('2d');
         const myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: data.labels, //Aqui é para os valor em baixo do grafico, onde mostra os 12 meses dinamicamente
                 datasets: [{
