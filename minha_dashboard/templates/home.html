@@ -12,51 +12,51 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <section class="nav_bar_lateral">
-        
-    {% block navbar %}
-        {% include 'nav.html' %}
-    {% endblock %}
-
-    </section>
-
-    <section class="tela">
-
-        <h1>Dashboard</h1>
-
-        <div class="totais">
-            <div class="valor">
-                <span class="txt">Total de Alugueis</span>
-                <span class="material-symbols-outlined" id="aluguel">car_rental</span>
-                <p>68 <span id="total_aluguel"></span> </p>
+        <section class="nav_bar_lateral">
+            
+        {% block navbar %}
+            {% include 'nav.html' %}
+        {% endblock %}
+    
+        </section>
+    
+        <section class="tela">
+    
+            <h1>Dashboard</h1>
+    
+            <div class="totais">
+                <div class="valor">
+                    <span class="txt">Total de Alugueis</span>
+                    <span class="material-symbols-outlined" id="aluguel">car_rental</span>
+                    <p>68 <span id="total_aluguel"></span> </p>
+                </div>
+    
+                <div class="valor" >
+                    <span class="txt">Veiculos Disponiveis</span>
+                    <span class="material-symbols-outlined" id="disponivel">no_crash</span>
+                    <p>16 <span id="total_disponivel"></span> </p>
+                </div>
+    
+                <div class="valor" >
+                    <span class="txt">Veículos Ocupados</span>
+                    <span class="material-symbols-outlined" id="ocupado">directions_car</span>
+                    <p>45 <span id="total_ocupado"></span> </p>
+                </div>
+    
+                <div class="valor">
+                    <span class="txt">Em Manutenção</span>
+                    <span class="material-symbols-outlined" id="manutencao">construction</span>
+                    <p>4 <span id="total_manutencao"></span> </p>
+                </div>
             </div>
-
-            <div class="valor" >
-                <span class="txt">Veiculos Disponiveis</span>
-                <span class="material-symbols-outlined" id="disponivel">no_crash</span>
-                <p>16 <span id="total_disponivel"></span> </p>
+    
+            <div class="grafico">
+                <div class="faturamento_mensal">
+                    <h2>Faturamento: <span id="faturamento_total"></span></h2>
+                    <canvas id="faturamento_mensal" height="100vh"></canvas>
+                </div>
             </div>
-
-            <div class="valor" >
-                <span class="txt">Veículos Ocupados</span>
-                <span class="material-symbols-outlined" id="ocupado">directions_car</span>
-                <p>45 <span id="total_ocupado"></span> </p>
-            </div>
-
-            <div class="valor">
-                <span class="txt">Em Manutenção</span>
-                <span class="material-symbols-outlined" id="manutencao">construction</span>
-                <p>4 <span id="total_manutencao"></span> </p>
-            </div>
-        </div>
-
-        <div class="grafico">
-            <div class="faturamento_mensal">
-                <h2>Faturamento: <span id="faturamento_total"></span></h2>
-                <canvas id="faturamento_mensal" height="100vh"></canvas>
-            </div>
-        </div>
-    </section>
+        </section>
     
 </body>
 

@@ -6,26 +6,16 @@
 
 /*Menu lateral*/
 
-.menu {
-    width: 20vw;
-}
-
 .menu_lateral{
     width: 250px;
-    height: 100%;
+    height: 100vh;
     background-color: white;
-    padding: 40px 0 40px 1%;
+    padding-top: 30px;
     box-shadow: 5px 0 0 #1E90FF;
-
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
 ul {
-    height: 100%;
     list-style-type: none;
-    margin-top: 50px;
 }
 
 ul > li.item_menu{
