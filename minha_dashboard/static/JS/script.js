@@ -25,8 +25,8 @@ function renderiza_faturamento_mensal(url){
                 datasets: [{
                     label: "Faturamento", //Aqui é o nome do grafico
                     data: data.data,
-                    backgroundColor: (`rgba(${106}, ${90}, ${205}, ${0.2})`),
-                    borderColor: (`rgba(${72}, ${61}, ${139}, ${1})`),
+                    backgroundColor: (`rgba(106, 90, 205, 0.2)`),
+                    borderColor: (`rgba(72, 61, 139, 1)`),
                     borderWidth: 1
                 }]
             },
