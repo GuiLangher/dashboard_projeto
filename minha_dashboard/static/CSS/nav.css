@@ -1,3 +1,8 @@
+:root{
+    --backgroun_color: white;
+    --cor_secundaria: #1E90FF;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,9 +14,9 @@
 .menu_lateral{
     width: 250px;
     height: 100vh;
-    background-color: white;
+    background-color: var(--backgroun_color);
     padding-top: 30px;
-    box-shadow: 5px 0 0 #1E90FF;
+    box-shadow: 5px 0 0 var(--cor_secundaria);
 }
 
 ul {
@@ -26,7 +31,7 @@ ul > li.item_menu{
 }
 
 ul > li.item_menu:hover{
-    background: #1E90FF;
+    background: var(--cor_secundaria);
 }
 
 ul > li.item_menu a{
@@ -46,5 +51,3 @@ ul > li.item_menu .txt_link{
 .menu .material-symbols-outlined{
     font-size: 30px;
 }
-
-/*Até aqui*/

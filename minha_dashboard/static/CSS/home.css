@@ -1,3 +1,12 @@
+:root{
+    --background_color: #f5f1f1;
+    --cor_templates:white;
+
+    --aluguel:#9cbaf1;
+    --disponiveis:#7FFFD4;
+    --ocupado:#FFDEAD;
+    --manutencao:#FF7F50;
+}
 
 *{
     margin: 0;
@@ -6,7 +15,7 @@
 }
 
 body{
-    background-color: #f5f1f1;
+    background-color: var(--background_color);
     display: flex;
 }
 
@@ -25,7 +34,7 @@ h1 {
 }
 
 .valor{
-    background-color: white;
+    background-color: var(--cor_templates);
     border-radius: 10px;
     font-size: 25px;
 }
@@ -44,23 +53,35 @@ h1 {
 }
 
 #aluguel{
-    background-color: #9cbaf1;
-    color: #4169E1;
+
+    --dark_color: color-mix(in srgb, black 100%, var(--aluguel) 100%); /*Função que deixa a cor de uma variavel mais escura*/
+
+    background-color: var(--aluguel);
+    color: var(--dark_color);
 }
 
 #disponivel{
-    background-color: #7FFFD4;
-    color: #008000;
+
+    --dark_color: color-mix(in srgb, black 100%, var(--disponiveis) 100%);
+
+    background-color: var(--disponiveis);
+    color: var(--dark_color);
 }
 
 #ocupado{
-    background-color: #FFDEAD;
-    color: #A0522D;
+
+    --dark_color: color-mix(in srgb, black 100%, var(--ocupado) 100%);
+
+    background-color: var(--ocupado);
+    color: var(--dark_color);
 }
 
 #manutencao{
-    background-color: #FF7F50;
-    color: #8B0000;
+
+    --dark_color: color-mix(in srgb, black 100%, var(--manutencao) 100%);
+
+    background-color: var(--manutencao);
+    color: var(--dark_color);
 }
 
 .valor > p{
@@ -70,7 +91,7 @@ h1 {
 }
 
 .grafico{
-    background-color: white;
+    background-color: var(--cor_templates);
     margin-top: 20px;
     width: 75vw;
     border-radius: 10px;
