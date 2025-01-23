@@ -30,6 +30,11 @@ ul > li.item_menu{
     margin-left: 10px;
 }
 
+
+ul li.ativo{
+    background-color: var(--cor_secundaria);
+}
+
 ul > li.item_menu:hover{
     background: var(--cor_secundaria);
 }
