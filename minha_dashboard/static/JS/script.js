@@ -7,7 +7,6 @@ function renderiza_total_vendido(url){
     }).then(function(data){ //recebe data, que o json convertido na promessa anterior
         document.getElementById('faturamento_total').innerHTML = data.total
     })
-
 }
 
 function renderiza_faturamento_mensal(url){
@@ -17,19 +16,68 @@ function renderiza_faturamento_mensal(url){
         return result.json()
     }).then(function(data){
 
-        const ctx = document.getElementById('faturamento_mensal'). getContext('2d');
+        const ctx = document.getElementById('faturamento_mensal').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: data.labels, //Aqui é para os valor em baixo do grafico, onde mostra os 12 meses dinamicamente
+                labels: data.labels, //Aqui é para os valor em baixo do gráfico, onde mostra os 12 meses dinamicamente
                 datasets: [{
-                    label: "Faturamento", //Aqui é o nome do grafico
+                    label: "Faturamento", //Aqui é o nome do gráfico
                     data: data.data,
-                    backgroundColor: (`rgba(106, 90, 205, 0.2)`),
-                    borderColor: (`rgba(72, 61, 139, 1)`),
-                    borderWidth: 1
+                    backgroundColor: (function () {
+                        // Usando o gradiente semelhante ao primeiro gráfico
+                        const gradient = ctx.createLinearGradient(0, 25, 0, 300);
+                        gradient.addColorStop(0, '#3563E9');  // cor do roxo, correspondente a primeira cor do grafico 1
+                        gradient.addColorStop(1, 'rgba(243, 245, 247, 0.1)');  // terceira cor do grafico 1
+                        return gradient;
+                    })(),
+                    borderColor: '#3563E9', // cor de borda no gráfico
+                    borderWidth: 2, // espessura da borda
+                    pointBackgroundColor: '#3563E9', // cor de cada ponto
+                    pointRadius: 3, // raio de cada ponto
+                    fill: true,
+                    lineTension: 0,
                 }]
             },
+            options: {
+                layout: {
+                    padding: 10
+                },
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            padding: 10,
+                            autoSkip: false,
+                            maxRotation: 15,
+                            minRotation: 15
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Faturamento em R$",
+                            padding: 10
+                        },
+                        gridLines: {
+                            display: true,
+                            color: 'rgba(80, 102, 120, 0.25)'
+                        },
+                        ticks: {
+                            beginAtZero: false,
+                            max: 6000,
+                            min: 0,
+                            padding: 10
+                        }
+                    }]
+                }
+            }
         })
     })
 }
