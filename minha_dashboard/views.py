@@ -3,8 +3,19 @@ from .models import Vendas
 from datetime import datetime, timedelta
 from django.http import JsonResponse
 from django.db.models import Sum
+from logging import CRITICAL, ERROR, WARNING, INFO, DEBUG
+from logging import basicConfig
+from logging import critical, error, warning, info, debug
+
+basicConfig(
+    level=INFO,
+    filename='logs.log',
+    filemode='a',
+    format='%(levelname)s|%(asctime)s|%(message)s'
+)
 
 def home(request):
+    info('HTML_Carregado')
     return render(request, 'home.html')
 
 
